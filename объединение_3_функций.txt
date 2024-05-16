@@ -1,0 +1,11 @@
+(defun rat-operations (n d op)
+  (let ((rat (cons n d))
+        (g (gcd n d)))
+    (cond ((eq op 'numer) (print (/ n g)))
+          ((eq op 'denom) (print (/ d g)))
+          ((eq op 'gcd) (print g))
+          ((print "Invalid operation")))))
+
+(rat-operations 14 36 'numer)
+(rat-operations 14 36 'denom)
+(rat-operations 14 36 'gcd)
